@@ -1,4 +1,4 @@
-workspace(name = "repo_a")
+workspace(name = "repo_a_inner_project")
 rules_scala_version="7d02925073f0c78f905d9ca51d0470ee2508c8f3"
 
 http_archive(
@@ -24,6 +24,6 @@ load("@io_bazel_rules_scala//scala:toolchains.bzl", "scala_register_toolchains")
 scala_register_toolchains()
 
 local_repository(
-    name = "repo_a_inner_project",
-    path = "/Users/natans/demos/detached-workspaces/repo_a/src/main",
+    name = "repo_a",
+    path = "/Users/natans/demos/detached-workspaces/repo_a",
 )
